@@ -7,7 +7,8 @@ import Header from './Header';
 import MainContent from './MainContent';
 import Footer from './Footer';
 import UserProfile from './components/UserProfile';
-
+import UserContext from './UserContext'
+import ProfilePage from './ProfilePage'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -43,6 +44,11 @@ function App() {
         age="25" 
         bio="Loves hiking and photography" 
       />
+      
+      <UserContext.Provider value={userData}>
+          <ProfilePage />
+      </UserContext.Provider>
+
     </>
   )
 }
