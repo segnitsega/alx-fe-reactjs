@@ -1,28 +1,10 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './Home';
 import About from './About';
 import Services from './Services';
 import Contact from './Contact';
-
-function Navbar() {
-  const navStyle = {
-    display: 'flex',
-    justifyContent: 'center',
-    gap: '20px',
-    padding: '10px',
-    backgroundColor: '#f4f4f4'
-  };
-
-  return (
-    <nav style={navStyle}>
-      <Link to="/">Home</Link>
-      <Link to="/about">About</Link>
-      <Link to="/services">Services</Link>
-      <Link to="/contact">Contact</Link>
-    </nav>
-  );
-}
+import Navbar from './components/Navbar';  // Update this import statement
 
 function App() {
   return (
